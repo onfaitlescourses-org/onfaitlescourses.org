@@ -15,7 +15,7 @@ juice_logo_name = "On fait les courses"
 juice_logo_path = "logo.svg"
 juice_extra_menu = [
     { title = "Centre d'aide", link = "https://aide.onfaitlescourses.org" },
-    { title = "Github", link = "https://github.com/onfaitlescourses-org/onfaitlescourses.org" }
+    { title = "Code source", link = "https://github.com/onfaitlescourses-org/onfaitlescourses.org" }
 ]
 # Add page titles here to exclude them from the nav section (case sensitive)
 juice_exclude_menu = [

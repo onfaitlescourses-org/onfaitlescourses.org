@@ -1,0 +1,57 @@
+{% import "_macros.html" as macros %}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block favicon %}
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    {% endblock favicon %}
+    {% include "_variables.html" %}
+    {% block fonts %}
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    {% endblock fonts %}
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="{{ get_url(path="juice.css") }}">
+    <link href="/fontawesome/css/all.min.css" rel="stylesheet">
+    {% block head %}
+    {% endblock head %}
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="cdd2c786-b5e8-4f3e-ba30-65822da6b355";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+
+<body>
+    {% block header %}
+
+    <header class="pos-absolute" style="background-color: transparent">
+        {{ macros::render_header() }}
+    </header>
+
+    <div class="hero">
+        {% block hero %}
+        <section class="text-center">
+            <h1 class="heading-text" style="font-size: 120px">
+                Vous en avez <b>marre</b> de faire les courses ?
+            </h1>
+            <h2>Commandez en ligne. Faites-vous livrer.</h2>
+            <h2 >À partir de 10 €.</h2>
+        </section>
+        
+
+        {% endblock hero %}
+    </div>
+
+    {% endblock header %}
+
+    {% block footer %}
+    <footer>
+        <small class="subtext">
+            © 2023 <a href="https://onfaitlescourses.org">onfaitlescourses.org</a>
+        </small>
+    </footer>
+    {% endblock footer %}
+</body>
+
+
+</html>
